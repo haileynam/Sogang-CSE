@@ -1,0 +1,1 @@
+void calc(int n, int d,int* arr);

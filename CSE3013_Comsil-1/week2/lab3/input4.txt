@@ -1,0 +1,23 @@
+GREP(1)                                        General Commands Manual                                        GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+SYNOPSIS
+       grep [OPTIONS] PATTERN [FILE...]
+       grep [OPTIONS] [-e PATTERN]...  [-f FILE]...  [FILE...]
+
+DESCRIPTION
+       grep  searches  the  named  input  FILEs  for  lines containing a match to the given PATTERN.  If no files are
+       specified, or if the file “-” is given, grep searches standard input.  By default, grep  prints  the  matching
+       lines.
+
+       In  addition,  the  variant  programs  egrep,  fgrep  and rgrep are the same as grep -E, grep -F, and grep -r,
+       respectively.  These variants are deprecated, but are provided for backward compatibility.
+
+OPTIONS
+   Generic Program Information
+       --help Output a usage message and exit.
+
+       -V, --version
+              Output the version number of grep and exit.

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# no arguments given
+if [ $# -eq 0 ]
+then
+    echo "Usage: phone searchfor [...searchfor]"
+    echo "(You didn't tell me what you want to search for.)"
+    exit 0
+else
+    # arguments given
+    #echo $@
+    str="egrep -E $1 mydata"
+    #echo $str
+    for arg in "${@:2}"
+    do  
+        str="$str | egrep -E $arg"
+    done
+
+    #echo $str
+
+    # display
+    command="$str | awk -f display.awk"
+    eval $command
+    exit 0
+fi
+
+
+
+
